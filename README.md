@@ -3,7 +3,9 @@ Tempermonkey script for skip any link converter, just wait, see and download aut
 
 
 
-#### Installation
+
+
+### Installation
 
 - install tempermonkey : 
 
@@ -19,15 +21,13 @@ Tempermonkey script for skip any link converter, just wait, see and download aut
 
   [skip shorte.st ads]: https://github.com/anka-213/chrome-shorte.st-skipper	"src github"
 
-  ​
-
-### Warning
+## Warning
 
 > This project just for my own experiment, do it with your own risk.
 
 
 
-#### How it works 
+### How it works 
 
 - include list website
 - include jquery script
@@ -35,7 +35,7 @@ Tempermonkey script for skip any link converter, just wait, see and download aut
 
 
 
-#### Supported domains
+### Supported domains
 
 - oploverz
 
