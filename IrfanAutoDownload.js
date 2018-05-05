@@ -26,6 +26,9 @@
 // @include http://*gigapurbalinggaa.ga/*
 // @include https://*gigapurbalinggaa.ga/*
 
+// @include http://*losstor.com/*
+// @include https://*losstor.com/*
+
 
 
 
@@ -122,7 +125,11 @@
             $("#sikat").click();
             $("#btn_download").click();
         }else if(currentURL.indexOf("zippyshare") >= 0){
-            $(".download").click();
+            // $(".download").click();
+            // $("#dlbutton").click();
+            var urlClick = $("#dlbutton").attr('href');
+            window.open(urlClick ,"_self");
+
         }
         // else if(currentURL.indexOf("gigapurbalinggaa") >= 0){
         //     $("#d .green").click();
@@ -153,6 +160,10 @@
             console.log($(".button .green").prop("onclick"));
             $("#d a").children().first().click();
 
+        }
+        else if(currentURL.indexOf("lostor") >= 0){
+            $("#re_link").click();
+            $("a").click();
         }
 
 
