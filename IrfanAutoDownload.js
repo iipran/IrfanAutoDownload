@@ -9,6 +9,10 @@
 
 // @include http://*lauin.com/*
 // @include https://*lauin.com/*
+
+// @include http://*hexafile.net/*
+// @include https://*hexafile.net/*
+
 // @include http://*elsfile.org/*
 // @include https://*elsfile.org/*
 // @include http://*zippyshare.com/*
@@ -95,8 +99,8 @@
 
         console.log("current website : "+currentURL);
 
-        //lauin.com
-        if (currentURL.indexOf("lauin") >= 0){
+        //lauin.com or hexafile.net
+        if (currentURL.indexOf("lauin") >= 0 || currentURL.indexOf("hexafile") >= 0){
             var targetLoc = "";
             try{
                 targetLoc = $($("script")[6]).html().split("location=\"")[1].split("\";")[0];
@@ -128,7 +132,8 @@
             // $(".download").click();
             // $("#dlbutton").click();
             var urlClick = $("#dlbutton").attr('href');
-            window.open(urlClick ,"_self");
+//             window.open(urlClick ,"_self");
+            window.location = urlClick;
 
         }
         // else if(currentURL.indexOf("gigapurbalinggaa") >= 0){
