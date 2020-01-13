@@ -58,5 +58,7 @@ This repository included another script for anti adblock, AdsFight (for skip sho
 
 - solidfiles
 
+- kusonime (new)
+
   ​
 
