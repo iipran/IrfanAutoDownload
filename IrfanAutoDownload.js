@@ -13,6 +13,11 @@
 // @include http://*hexafile.net/*
 // @include https://*hexafile.net/*
 
+// @include http://*kusonime.com/*
+// @include https://*kusonime.com/*
+
+// @include https://intercelestial.com/
+
 // @include http://*elsfile.org/*
 // @include https://*elsfile.org/*
 // @include http://*zippyshare.com/*
@@ -170,9 +175,51 @@
             $("#re_link").click();
             $("a").click();
         }
+         else if(currentURL.indexOf("intercelestial") >= 0){
 
+             console.log("try to click spoint class")
+             document.getElementById('landing').submit();
+             $(".spoint").click();
+        }
+
+        else if(currentURL.indexOf("kusonime") >= 0){
+            setTimeout(
+                function()
+                {
+                    //do something special
+                    $("html").find("script").remove();
+
+                    $(".smokeurl").each(
+                    function(){
+                        $(this).find("a").each(function(){
+                            var temp1 =$(this).prop("href")
+                            console.log($(this).prop("href"))
+                            console.log("hasil decode="+decodeURIComponent(getUrlVars(temp1)["url"]))
+                            temp1 = decodeURIComponent(getUrlVars(temp1)["url"])
+
+                            console.log("temp1="+temp1)
+                            $(this).prop("href",temp1)
+                        })
+                    }
+                    )
+
+                    console.log("no annoying script, url replaced")
+
+                }, 500);
+        }
+
+
+        var script = document.createElement('script');script.src = "https://code.jquery.com/jquery-3.4.1.min.js";document.getElementsByTagName('head')[0].appendChild(script);
 
     });
+
+    function getUrlVars(url) {
+    var vars = {};
+    var parts = url.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(m,key,value) {
+        vars[key] = value;
+    });
+    return vars;
+}
 
 
 })();
