@@ -38,8 +38,12 @@
 // @include http://*losstor.com/*
 // @include https://*losstor.com/*
 
+// @include http://*travellinginfos.com/*
+// @include https://*travellinginfos.com/*
 
 
+// @include http://*igg-games.com/*
+// @include https://*igg-games.com/*
 
 
 
@@ -68,6 +72,8 @@
 
 (function() {
     'use strict';
+var script = document.createElement('script');script.src = "https://code.jquery.com/jquery-3.4.1.min.js";document.getElementsByTagName('head')[0].appendChild(script);
+
 
 
     // var currentUrl = window.location.href;
@@ -206,6 +212,29 @@
                     console.log("no annoying script, url replaced")
 
                 }, 500);
+        }
+
+        else if(currentURL.indexOf("travellinginfos") >= 0){
+            setTimeout(
+                function()
+                {
+                    //do something special
+                   // $("html").find("script").remove();
+
+
+                    console.log("no annoying script, url replaced")
+                    generate()
+                }, 500);
+        }
+        else if(currentURL.indexOf("igg-games") >= 0){
+
+            setTimeout(
+                function()
+                {
+                    console.log("try to remove script")
+                     $("html").find("script").remove();
+                   $("body").children().last().remove()
+                }, 3000);
         }
 
 
